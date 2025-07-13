@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign up for PromptMaster to start creating and testing LLM prompts. Choose from free or premium plans.">
+  <title>PromptMaster - Sign Up</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.15/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="prompMaster_landing.html" class="text-2xl font-bold text-blue-600">PromptMaster</a>
+      <a href="prompMaster_landing.html" class="text-blue-600 hover:text-blue-800">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Sign-Up Form Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">Sign Up for PromptMaster</h1>
+      <div id="signup-root" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md"></div>
+    </div>
+  </section>
+
+  <!-- Membership Tiers Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Choose Your Plan</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-4">Plus</h3>
+          <p class="text-gray-600 mb-4">Perfect for individuals starting with LLM prompts.</p>
+          <ul class="text-gray-600 mb-6">
+            <li>100 prompts/month</li>
+            <li>Basic analytics</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Select Plan</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-4">Advanced</h3>
+          <p class="text-gray-600 mb-4">Ideal for teams needing advanced features.</p>
+          <ul class="text-gray-600 mb-6">
+            <li>500 prompts/month</li>
+            <li>Advanced analytics</li>
+            <li>Priority email support</li>
+            <li>Team collaboration tools</li>
+          </ul>
+          <a href="#" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Select Plan</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold mb-4">Professional</h3>
+          <p class="text-gray-600 mb-4">For power users and enterprises.</p>
+          <ul class="text-gray-600 mb-6">
+            <li>Unlimited prompts</li>
+            <li>Full analytics suite</li>
+            <li>24/7 dedicated support</li>
+            <li>Custom integrations</li>
+          </ul>
+          <a href="#" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition">Select Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 PromptMaster. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+        <a href="#" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- React Component for Sign-Up Form -->
+  <script type="text/babel">
+    function SignUpForm() {
+      const [email, setEmail] = React.useState('');
+      const [password, setPassword] = React.useState('');
+      const [name, setName] = React.useState('');
+      const [message, setMessage] = React.useState('');
+
+      const handleSubmit = () => {
+        // Simulate form submission (replace with actual API call in production)
+        if (email && password && name) {
+          setMessage('Sign-up successful! Welcome to PromptMaster.');
+        } else {
+          setMessage('Please fill out all fields.');
+        }
+      };
+
+      return (
+        <div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2" htmlFor="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              placeholder="Enter your full name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2" htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="mb-6">
+            <label className="block text-gray-700 mb-2" htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button
+            onClick={handleSubmit}
+            className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition w-full"
+          >
+            Sign Up
+          </button>
+          {message && (
+            <p className={`mt-4 text-center ${message.includes('successful') ? 'text-green-600' : 'text-red-600'}`}>
+              {message}
+            </p>
+          )}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<SignUpForm />, document.getElementById('signup-root'));
+  </script>
+</body>
+</html>

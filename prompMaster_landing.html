@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PromptMaster: Create, test, and optimize LLM prompts with our intuitive user interface. Boost your AI interactions today!">
+  <title>PromptMaster - Intuitive LLM Prompt Interface</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.20.15/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-bg { background: linear-gradient(to right, #3b82f6, #8b5cf6); }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Hero Section -->
+  <header class="hero-bg text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">PromptMaster</h1>
+      <p class="text-lg md:text-xl mb-6">Craft, test, and optimize LLM prompts with our intuitive user interface.</p>
+      <a href="prompt.html" class="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+        Get Started Now
+      </a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose PromptMaster?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-2">Easy to Use</h3>
+          <p class="text-gray-600">Intuitive drag-and-drop interface to create prompts without coding.</p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-2">Real-Time Testing</h3>
+          <p class="text-gray-600">Test your prompts instantly and see AI responses in real time.</p>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-semibold mb-2">Optimization Tools</h3>
+          <p class="text-gray-600">Analyze and refine prompts for better AI performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-600 text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Ready to Master Your Prompts?</h2>
+      <p class="text-lg mb-6">Join thousands of users creating powerful LLM prompts today.</p>
+      <a href="signup.html" class="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-100 transition">
+        Sign Up Free
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 PromptMaster. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="text-gray-400 hover:text-white mx-2">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white mx-2">Terms of Service</a>
+        <a href="#" class="text-gray-400 hover:text-white mx-2">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- React Component for CTA Button Interaction -->
+  <div id="cta-root"></div>
+  <script type="text/babel">
+    function CTAButton() {
+      const handleClick = () => {
+        window.location.href = 'prompt.html';
+      };
+
+      return (
+        <button
+          onClick={handleClick}
+          className="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-100 transition mt-4"
+        >
+          Try It Now
+        </button>
+      );
+    }
+
+    ReactDOM.render(<CTAButton />, document.getElementById('cta-root'));
+  </script>
+</body>
+</html>
